@@ -32,8 +32,8 @@ class OwnersController < ApplicationController
 
   patch '/owners/:id' do
     ###### bug fix
-  if !params[:owner].keys.include?("pet_ids")
-    params[:owner]["pet_ids"] = []
+  #if !params[:owner].keys.include?("pet_ids")
+  #  params[:owner]["pet_ids"] = []
     ######
 
     @owner.update(params["owner"])
@@ -42,5 +42,5 @@ class OwnersController < ApplicationController
    end
    redirect "owners/#{@owner.id}"
   end
-  
+
 end
